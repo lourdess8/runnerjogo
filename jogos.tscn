@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://daeq3lw2kxmdf"]
+
+[ext_resource type="Script" uid="uid://cwqp553sli38c" path="res://jogos.gd" id="1_3jg3a"]
+[ext_resource type="Texture2D" uid="uid://bdudh8qtyey1j" path="res://fundojogoazul.jpg" id="1_7gsa3"]
+[ext_resource type="Texture2D" uid="uid://dvtdgfnr0x1v5" path="res://background.png" id="2_3jg3a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_etxs6"]
+size = Vector2(2716.625, 54)
+
+[node name="jogos" type="Node2D" unique_id=1605257099]
+script = ExtResource("1_3jg3a")
+
+[node name="fundo" type="Sprite2D" parent="." unique_id=1836410573]
+scale = Vector2(1.7098213, 1.5333333)
+texture = ExtResource("1_7gsa3")
+centered = false
+
+[node name="fundo2" type="Sprite2D" parent="." unique_id=1457966877]
+position = Vector2(1723.0001, 321)
+scale = Vector2(1.7113097, 1.5285714)
+texture = ExtResource("1_7gsa3")
+
+[node name="chao" type="Sprite2D" parent="." unique_id=1997689516]
+position = Vector2(578, 615)
+scale = Vector2(3.6437497, 0.31111124)
+texture = ExtResource("2_3jg3a")
+
+[node name="chao2" type="Sprite2D" parent="." unique_id=1080507104]
+position = Vector2(1732.5, 614.5)
+scale = Vector2(3.6406255, 0.30555543)
+texture = ExtResource("2_3jg3a")
+
+[node name="chaofisico" type="StaticBody2D" parent="." unique_id=301449732]
+
+[node name="corpochao" type="CollisionShape2D" parent="chaofisico" unique_id=2024862732]
+position = Vector2(1358.6875, 617)
+shape = SubResource("RectangleShape2D_etxs6")
