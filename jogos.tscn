@@ -3,9 +3,72 @@
 [ext_resource type="Script" uid="uid://cwqp553sli38c" path="res://jogos.gd" id="1_3jg3a"]
 [ext_resource type="Texture2D" uid="uid://bdudh8qtyey1j" path="res://fundojogoazul.jpg" id="1_7gsa3"]
 [ext_resource type="Texture2D" uid="uid://dvtdgfnr0x1v5" path="res://background.png" id="2_3jg3a"]
+[ext_resource type="Texture2D" uid="uid://d2k2817e0wkgt" path="res://player.png" id="4_etxs6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_etxs6"]
 size = Vector2(2716.625, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mc8i"]
+atlas = ExtResource("4_etxs6")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2eet"]
+atlas = ExtResource("4_etxs6")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ql3mk"]
+atlas = ExtResource("4_etxs6")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgwxl"]
+atlas = ExtResource("4_etxs6")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1q4f"]
+atlas = ExtResource("4_etxs6")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8frvp"]
+atlas = ExtResource("4_etxs6")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86qbu"]
+atlas = ExtResource("4_etxs6")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vybyv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mc8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2eet")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ql3mk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgwxl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1q4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8frvp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86qbu")
+}],
+"loop": true,
+"name": &"pular",
+"speed": 5.0
+}]
 
 [node name="jogos" type="Node2D" unique_id=1605257099]
 script = ExtResource("1_3jg3a")
@@ -35,3 +98,14 @@ texture = ExtResource("2_3jg3a")
 [node name="corpochao" type="CollisionShape2D" parent="chaofisico" unique_id=2024862732]
 position = Vector2(1358.6875, 617)
 shape = SubResource("RectangleShape2D_etxs6")
+
+[node name="jogador" type="CharacterBody2D" parent="." unique_id=1575815856]
+
+[node name="corpo" type="CollisionShape2D" parent="jogador" unique_id=1257629600]
+
+[node name="imagem" type="AnimatedSprite2D" parent="jogador" unique_id=1516250513]
+position = Vector2(209.99998, 573)
+scale = Vector2(3, 2.1458333)
+sprite_frames = SubResource("SpriteFrames_vybyv")
+animation = &"pular"
+autoplay = "default"
