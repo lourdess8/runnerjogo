@@ -57,7 +57,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8frvp")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }, {
@@ -65,7 +65,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_86qbu")
 }],
-"loop": true,
+"loop": 1,
 "name": &"pular",
 "speed": 5.0
 }]
@@ -79,7 +79,7 @@ texture = ExtResource("1_7gsa3")
 centered = false
 
 [node name="fundo2" type="Sprite2D" parent="." unique_id=1457966877]
-position = Vector2(1723.0001, 321)
+position = Vector2(1700, 324)
 scale = Vector2(1.7113097, 1.5285714)
 texture = ExtResource("1_7gsa3")
 
